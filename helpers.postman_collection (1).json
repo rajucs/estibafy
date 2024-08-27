@@ -1,0 +1,957 @@
+{
+	"info": {
+		"_postman_id": "392b6062-c49e-4429-8019-930d1f17305d",
+		"name": "helpers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "helper signup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": [],
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "asdf",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "helper01@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "mobile",
+							"value": "adfasdf",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "password_confirm",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "latitude",
+							"value": "1.1",
+							"type": "text"
+						},
+						{
+							"key": "longitude",
+							"value": "2.1",
+							"type": "text"
+						},
+						{
+							"key": "apartment",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "asdf",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "asdfasdf",
+							"type": "text"
+						},
+						{
+							"key": "province",
+							"value": "asfasdf",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "Pu_Z1ibA4/1650808177987.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://container.linktoeat.com/api/helper/signup",
+					"protocol": "https",
+					"host": [
+						"container",
+						"linktoeat",
+						"com"
+					],
+					"path": [
+						"api",
+						"helper",
+						"signup"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "demo helper5",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "demohelper8@gmail.co",
+							"disabled": true
+						},
+						{
+							"key": "mobile",
+							"value": "030234554",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"disabled": true
+						},
+						{
+							"key": "password_confirm",
+							"value": "123456",
+							"disabled": true
+						},
+						{
+							"key": "latitude",
+							"value": "54.5454",
+							"disabled": true
+						},
+						{
+							"key": "longitude",
+							"value": "76.545",
+							"disabled": true
+						},
+						{
+							"key": "apartment",
+							"value": "12",
+							"disabled": true
+						},
+						{
+							"key": "city",
+							"value": "lahore",
+							"disabled": true
+						},
+						{
+							"key": "country",
+							"value": "pakistan123",
+							"disabled": true
+						},
+						{
+							"key": "province",
+							"value": "punjab",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "helper login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://container.linktoeat.com/api/helper/login?email=helper@gmail.com&password=asdfasdf",
+					"protocol": "https",
+					"host": [
+						"container",
+						"linktoeat",
+						"com"
+					],
+					"path": [
+						"api",
+						"helper",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "helper@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "asdfasdf"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_helper profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "365|En51DVpat0IpzRU1DtU8s3J2ypcXyWfetvG5jvgp",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "7HobO0MFm/default-admin.jpeg"
+						},
+						{
+							"key": "name",
+							"value": "first helper ",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "yo",
+							"type": "text"
+						},
+						{
+							"key": "province",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "latitude",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "longitude",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "mobile",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "province",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://container.linktoeat.com/api/helper/profile?name=demo helper 1234&email=demohelper01@gmail.com&mobile=22323434&latitude=66.666&longitude=77.7777",
+					"protocol": "https",
+					"host": [
+						"container",
+						"linktoeat",
+						"com"
+					],
+					"path": [
+						"api",
+						"helper",
+						"profile"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "demo helper 1234"
+						},
+						{
+							"key": "email",
+							"value": "demohelper01@gmail.com"
+						},
+						{
+							"key": "mobile",
+							"value": "22323434"
+						},
+						{
+							"key": "latitude",
+							"value": "66.666"
+						},
+						{
+							"key": "longitude",
+							"value": "77.7777"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "helper dashboard api with active and remaning job count",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "360|vPXOiPMkmpURU9ivj7e8fVWe0uDFVcYOBCzRkq4A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://container.linktoeat.com/api/helper/jobs",
+					"protocol": "https",
+					"host": [
+						"container",
+						"linktoeat",
+						"com"
+					],
+					"path": [
+						"api",
+						"helper",
+						"jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "helper inprocess,complete,cancle jobs",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "360|vPXOiPMkmpURU9ivj7e8fVWe0uDFVcYOBCzRkq4A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://container.linktoeat.com/api/helper/detail/jobs",
+					"protocol": "https",
+					"host": [
+						"container",
+						"linktoeat",
+						"com"
+					],
+					"path": [
+						"api",
+						"helper",
+						"detail",
+						"jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "helper job_action to accept decline key words are(accepted, declined)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "224|IJd89HhcjiSuYpNCz3YQHiQrwzINmNvdspMbt1DH",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "status",
+							"value": "accepted",
+							"type": "default"
+						},
+						{
+							"key": "job_id",
+							"value": "168",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://container.linktoeat.com/api/helper/job/action",
+					"protocol": "https",
+					"host": [
+						"container",
+						"linktoeat",
+						"com"
+					],
+					"path": [
+						"api",
+						"helper",
+						"job",
+						"action"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "helper job start stop job key words are (started, completed)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "360|vPXOiPMkmpURU9ivj7e8fVWe0uDFVcYOBCzRkq4A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "status",
+							"value": "completed",
+							"type": "default"
+						},
+						{
+							"key": "job_id",
+							"value": "168",
+							"type": "default"
+						},
+						{
+							"key": "images",
+							"type": "file",
+							"src": "uny0HfkZX/1646237485_Samasama Logo (1).jpg"
+						},
+						{
+							"key": "latitude",
+							"value": "1.1.1",
+							"type": "text"
+						},
+						{
+							"key": "longitude",
+							"value": "0.0.25",
+							"type": "text"
+						},
+						{
+							"key": "timestemp",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://container.linktoeat.com/api/helper/job/action/status",
+					"protocol": "https",
+					"host": [
+						"container",
+						"linktoeat",
+						"com"
+					],
+					"path": [
+						"api",
+						"helper",
+						"job",
+						"action",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add goveremnt data",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "360|vPXOiPMkmpURU9ivj7e8fVWe0uDFVcYOBCzRkq4A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id_no",
+							"value": "2333434",
+							"type": "default"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "6SxbgAH8Z/default-admin.jpeg"
+						},
+						{
+							"key": "expire_date",
+							"value": "2020/11/03",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://container.linktoeat.com/api/helper/submit/goverment",
+					"protocol": "https",
+					"host": [
+						"container",
+						"linktoeat",
+						"com"
+					],
+					"path": [
+						"api",
+						"helper",
+						"submit",
+						"goverment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "job_detail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "360|vPXOiPMkmpURU9ivj7e8fVWe0uDFVcYOBCzRkq4A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://container.linktoeat.com/api/job/detail/168",
+					"protocol": "https",
+					"host": [
+						"container",
+						"linktoeat",
+						"com"
+					],
+					"path": [
+						"api",
+						"job",
+						"detail",
+						"168"
+					]
+				},
+				"description": "get job detail for users "
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/api/usersCreate?name=rizwan&email=rizwanhaider02@gmail.com&mobile=03028976535&password=123456&password_confirm=123456&latitude=54.5454&longitude=76.545&user_type=1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:8000/api/usersCreate?name=rizwan&email=rizwanhaider02@gmail.com&mobile=03028976535&password=123456&password_confirm=123456&latitude=54.5454&longitude=76.545&user_type=1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"usersCreate"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "rizwan"
+						},
+						{
+							"key": "email",
+							"value": "rizwanhaider02@gmail.com"
+						},
+						{
+							"key": "mobile",
+							"value": "03028976535"
+						},
+						{
+							"key": "password",
+							"value": "123456"
+						},
+						{
+							"key": "password_confirm",
+							"value": "123456"
+						},
+						{
+							"key": "latitude",
+							"value": "54.5454"
+						},
+						{
+							"key": "longitude",
+							"value": "76.545"
+						},
+						{
+							"key": "user_type",
+							"value": "1"
+						}
+					]
+				},
+				"description": "user login in helpers project"
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/api/job/post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "6|r6EwT98Tk1MVSQuwr2Hf62c9Xmm02lvhdlrqLnQd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "container_id",
+							"value": "1",
+							"type": "default"
+						},
+						{
+							"key": "package_type",
+							"value": "2",
+							"type": "default"
+						},
+						{
+							"key": "start_time",
+							"value": "2022-02-01 02:16:36",
+							"type": "default"
+						},
+						{
+							"key": "end_time",
+							"value": "2022-02-01 02:16:36",
+							"type": "default"
+						},
+						{
+							"key": "address",
+							"value": "lahore",
+							"type": "default"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Rizwan/Downloads/Samasama Logo (1).jpg"
+						},
+						{
+							"key": "voice",
+							"type": "file",
+							"src": "/C:/Users/Rizwan/Desktop/file_example_MP3_700KB.mp3"
+						},
+						{
+							"key": "helpers",
+							"value": "sds",
+							"type": "default"
+						},
+						{
+							"key": "latitude",
+							"value": "343.454",
+							"type": "default"
+						},
+						{
+							"key": "longitude",
+							"value": "454.45",
+							"type": "default"
+						},
+						{
+							"key": "name",
+							"value": "job5",
+							"type": "default"
+						},
+						{
+							"key": "helper_size",
+							"value": "3",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/job/post",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"job",
+						"post"
+					]
+				},
+				"description": "user job post here in  "
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/api/payment_method",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "6|r6EwT98Tk1MVSQuwr2Hf62c9Xmm02lvhdlrqLnQd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "ASasasa",
+							"type": "default"
+						},
+						{
+							"key": "stackholder_type",
+							"value": "user",
+							"type": "default"
+						},
+						{
+							"key": "payment_method_id",
+							"value": "4",
+							"type": "default"
+						},
+						{
+							"key": "card_no",
+							"value": "5454545",
+							"type": "default"
+						},
+						{
+							"key": "expiry_date",
+							"value": "2022-02-24",
+							"type": "default"
+						},
+						{
+							"key": "cvv",
+							"value": "334",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/payment_method",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"payment_method"
+					]
+				},
+				"description": "add payment method in user "
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/api/job/helper/status",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "224|IJd89HhcjiSuYpNCz3YQHiQrwzINmNvdspMbt1DH",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "status",
+							"value": "decline",
+							"type": "default"
+						},
+						{
+							"key": "job_id",
+							"value": "11",
+							"type": "default"
+						},
+						{
+							"key": "helper_id",
+							"value": "8",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://container.linktoeat.com/api/job/helper/status",
+					"protocol": "https",
+					"host": [
+						"container",
+						"linktoeat",
+						"com"
+					],
+					"path": [
+						"api",
+						"job",
+						"helper",
+						"status"
+					]
+				},
+				"description": "update helper status  . user accept or declined helper status "
+			},
+			"response": []
+		},
+		{
+			"name": "helper_earning",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "340|IEOh623FiYrsn8Iis4sMMMzYZzex4QO7fdGxxSyK",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://container.linktoeat.com/api/helper/job/earning",
+					"protocol": "https",
+					"host": [
+						"container",
+						"linktoeat",
+						"com"
+					],
+					"path": [
+						"api",
+						"helper",
+						"job",
+						"earning"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "44|HqdKrUSWD6bSsTBcfozDRTqmZkiHOmCKj09Ty1Sq"
+		}
+	]
+}

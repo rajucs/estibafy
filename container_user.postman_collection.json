@@ -1,0 +1,569 @@
+{
+	"info": {
+		"_postman_id": "9688e710-0ac7-41a9-9dd5-06c91f9b780b",
+		"name": "container_user",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"goverment_id\":\"12\",\n\"name\":\"yo\",\n\"user_type\":1,\n\"mobile\":\"03000000000\",\n\"password\":\"123456\",\n\"password_confirm\":\"123456\",\n\"email\":\"user2@gmail.com\",\n\"latitude\":\"0.60000\",\n\"longitude\":\"0.50000\"\n}\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://container.linktoeat.com/api/usersCreate",
+					"protocol": "https",
+					"host": [
+						"container",
+						"linktoeat",
+						"com"
+					],
+					"path": [
+						"api",
+						"usersCreate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"password\":\"123456\",\n\"email\":\"user2@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://container.linktoeat.com/api/login",
+					"protocol": "https",
+					"host": [
+						"container",
+						"linktoeat",
+						"com"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_detail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://container.linktoeat.com/api/userDetails/",
+					"protocol": "https",
+					"host": [
+						"container",
+						"linktoeat",
+						"com"
+					],
+					"path": [
+						"api",
+						"userDetails",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_packages_container",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "212|QOuZixHRj7EHHmxsHYDSgodEZ7G3fBnbCvu1a2L7",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://container.linktoeat.com/api/cargo/types",
+					"protocol": "https",
+					"host": [
+						"container",
+						"linktoeat",
+						"com"
+					],
+					"path": [
+						"api",
+						"cargo",
+						"types"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_jobs (pending,complete,inprogress)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "212|QOuZixHRj7EHHmxsHYDSgodEZ7G3fBnbCvu1a2L7",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://container.linktoeat.com/api/get/jobs",
+					"protocol": "https",
+					"host": [
+						"container",
+						"linktoeat",
+						"com"
+					],
+					"path": [
+						"api",
+						"get",
+						"jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "job_post",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept-encoding": true,
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{           \n            \n            \"name\":\"Want to unload my container\",\n            \"container_id\":1,\n            \"package_type\":\"Boxes,palets\",\n            \"start_time\":\"2022-02-18 23:39:33\",\n            \"end_time\":\"2022-03-18 23:39:33\",\n            \"address\":\"101 hall road lahore\",\n            \"helper_size\":2,\n            \"latitude\":\"1.1\",\n            \"longitude\":\"1.2\"\n            \n            \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://container.linktoeat.com/api/job/post",
+					"protocol": "https",
+					"host": [
+						"container",
+						"linktoeat",
+						"com"
+					],
+					"path": [
+						"api",
+						"job",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "212|QOuZixHRj7EHHmxsHYDSgodEZ7G3fBnbCvu1a2L7",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mobile\":\"1111111111111111\",\n    \"name\":\"admin\",\n    \"password\":\"123456\",\n    \"password_confirm\":\"123456\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://container.linktoeat.com/api/usersUpdate",
+					"protocol": "https",
+					"host": [
+						"container",
+						"linktoeat",
+						"com"
+					],
+					"path": [
+						"api",
+						"usersUpdate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "job_checkout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "212|QOuZixHRj7EHHmxsHYDSgodEZ7G3fBnbCvu1a2L7",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"job_id\":101,\n\"total_helpers\":12\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://container.linktoeat.com/api/job/checkout",
+					"protocol": "https",
+					"host": [
+						"container",
+						"linktoeat",
+						"com"
+					],
+					"path": [
+						"api",
+						"job",
+						"checkout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "job_detail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "212|QOuZixHRj7EHHmxsHYDSgodEZ7G3fBnbCvu1a2L7",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://container.linktoeat.com/api/job/detail/11",
+					"protocol": "https",
+					"host": [
+						"container",
+						"linktoeat",
+						"com"
+					],
+					"path": [
+						"api",
+						"job",
+						"detail",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_helper job  status accept decline (accepted/decline key words)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "212|QOuZixHRj7EHHmxsHYDSgodEZ7G3fBnbCvu1a2L7",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "status",
+							"value": "accepted",
+							"type": "default"
+						},
+						{
+							"key": "job_id",
+							"value": "23",
+							"type": "default"
+						},
+						{
+							"key": "helper_id",
+							"value": "8",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://container.linktoeat.com/api/job/helper/status",
+					"protocol": "https",
+					"host": [
+						"container",
+						"linktoeat",
+						"com"
+					],
+					"path": [
+						"api",
+						"job",
+						"helper",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_job status complete/cancle",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "212|QOuZixHRj7EHHmxsHYDSgodEZ7G3fBnbCvu1a2L7",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "status",
+							"value": "decline",
+							"type": "default"
+						},
+						{
+							"key": "job_id",
+							"value": "11",
+							"type": "default"
+						},
+						{
+							"key": "helper_id",
+							"value": "8",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://container.linktoeat.com/api/job/helper/status",
+					"protocol": "https",
+					"host": [
+						"container",
+						"linktoeat",
+						"com"
+					],
+					"path": [
+						"api",
+						"job",
+						"helper",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add payment method",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "212|QOuZixHRj7EHHmxsHYDSgodEZ7G3fBnbCvu1a2L7",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "ASasasa",
+							"type": "default"
+						},
+						{
+							"key": "stackholder_type",
+							"value": "user",
+							"type": "default"
+						},
+						{
+							"key": "payment_method_id",
+							"value": "4",
+							"type": "default"
+						},
+						{
+							"key": "card_no",
+							"value": "5454545",
+							"type": "default"
+						},
+						{
+							"key": "expiry_date",
+							"value": "2022-02-24",
+							"type": "default"
+						},
+						{
+							"key": "cvv",
+							"value": "334",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://container.linktoeat.com/api/payment_method",
+					"protocol": "https",
+					"host": [
+						"container",
+						"linktoeat",
+						"com"
+					],
+					"path": [
+						"api",
+						"payment_method"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "complete_job",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "get_jobs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base_rul",
+			"value": "https://container.linktoeat.com"
+		},
+		{
+			"key": "token",
+			"value": "164|HKwAfSUUOaixlRwJUEAbOig77t83sKSdE1CgA4Qb"
+		}
+	]
+}
